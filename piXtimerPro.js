@@ -110,6 +110,81 @@ instance.prototype.actions = function(system) {
         },
         'speakerTimerPlay':    {
             label: 'Timer speaker play'
+        },
+        'speakerTimerPause':    {
+            label: 'Timer speaker pause'
+        },
+        'speakerTimerStop':    {
+            label: 'Timer speaker stop'
+        },
+        'sessionTimerPlay':    {
+            label: 'Timer session play'
+        },
+        'sessionTimerPause':    {
+            label: 'Timer session pause'
+        },
+        'sessionTimerStop':    {
+            label: 'Timer session stop'
+        },
+        'allTimerPlay':    {
+            label: 'Timer all play'
+        },
+        'allTimerPause':    {
+            label: 'Timer all pause'
+        },
+        'allTimerStop':    {
+            label: 'Timer all stop'
+        },
+        'recallMessagePreset':    {
+            label: 'Recall message preset',
+            options: [
+                {
+                    type: 'textinput',
+                    label: 'Cue ID',
+                    id: 'cue',
+                    regex: self.REGEX_NUMBER
+                }
+            ]
+        },
+        'showMessage':    {
+            label: 'Message show'
+        },
+        'hideMessage':    {
+            label: 'Message hide'
+        },
+        'blackShow':    {
+            label: 'Black show'
+        },
+        'blackHide':    {
+            label: 'Black hide'
+        },
+        'countdownVideoPlay:':    {
+            label: 'Countdown video time and play',
+            options: [
+                {
+                    type: 'textinput',
+                    label: 'Countdown video time and Play',
+                    id: 'time',
+                    regex: self.REGEX_NUMBER
+                }
+            ]
+        },
+        'countdownVideo:':    {
+            label: 'Countdown video time',
+            options: [
+                {
+                    type: 'textinput',
+                    label: 'Countdown Time',
+                    id: 'time',
+                    regex: self.REGEX_NUMBER
+                }
+            ]
+        },
+        'countdownPlay:':    {
+            label: 'Countdown video Play'
+        },
+        'countdownStop:':    {
+            label: 'Countdown video stop'
         }
     });
 };
@@ -122,16 +197,82 @@ instance.prototype.action = function(action) {
     switch (action.action){
 
         case 'recallTimerPreset':
-            cmd = 'PST '+ opt.task;
+            cmd = 'PST '+ opt.cue;
             break;
 
         case 'speakerTimerPlay':
             cmd = 'PST PLAY';
             break;
 
+        case 'speakerTimerPause':
+            cmd = 'PST BREAK';
+            break;
+
+        case 'speakerTimerStop':
+            cmd = 'PST STOP';
+            break;
+
+        case 'sessionTimerPlay':
+            cmd = 'PSTS PLAY';
+            break;
+
+        case 'sessionTimerPause':
+            cmd = 'PSTS BREAK';
+            break;
+
+        case 'sessionTimerStop':
+            cmd = 'PSTS STOP';
+            break;
+
+        case 'allTimerPlay':
+            cmd = 'PSTA PLAY';
+            break;
+
+        case 'allTimerPause':
+            cmd = 'PSTA BREAK';
+            break;
+
+        case 'allTimerStop':
+            cmd = 'PSTA STOP';
+            break;
+
+        case 'recallMessagePreset':
+            cmd = 'PSTM ' + opt.cue;
+            break;
+
+        case 'showMessage':
+            cmd = 'PSTM SHOW';
+            break;
+
+        case 'hideMessage':
+            cmd = 'PSTM HIDE';
+            break;
+
+        case 'blackShow':
+            cmd = 'BLACK SHOW';
+            break;
+
+        case 'blackHide':
+            cmd = 'BLACK HIDE';
+            break;
+
+        case 'countdownVideoPlay':
+            cmd = 'CTD ' + opt.time + " PLAY";
+            break;
+
+        case 'countdownVideo':
+            cmd = 'CTD ' + opt.time;
+            break;
+
+        case 'countdownPlay':
+            cmd = 'CTD PLAY';
+            break;
+
+        case 'countdownStop':
+            cmd = 'CTD STOP';
+            break;
+
     };
-
-
 
 
     if (self.config.prot == 'tcp') {
