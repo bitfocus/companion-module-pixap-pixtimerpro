@@ -29,8 +29,6 @@ instance.prototype.init = function() {
     debug = self.debug;
     log = self.log;
 
-    self.status(1,'Connecting'); // status ok!
-
     self.init_tcp();
 };
 
