@@ -1,5 +1,5 @@
 {
-    "name": "pixtimerpro",
+    "name": "pixap-pixtimerpro",
     "version": "1.0.0",
     "keywords": [
         "Software",
@@ -10,7 +10,7 @@
 	"shortname": "piXtimer",
     "homepage": "https://www.pixap.fr/products.php?ref=8&lang=en",
     "description": "Module to control piXtimer pro countdown timer",
-    "main": "piXtimerPro.js",
+    "main": "pixtimerpro.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
