@@ -41,7 +41,7 @@ instance.prototype.init_tcp = function() {
 		}
 
 		if (self.config.host) {
-				self.socket = new tcp(self.config.host, 9756);
+				self.socket = new tcp(self.config.host, self.config.port);
 
 				self.socket.on('status_change', function (status, message) {
 						self.status(status, message);
@@ -88,7 +88,7 @@ instance.prototype.config_fields = function () {
 // When module gets deleted
 instance.prototype.destroy = function() {
 		var self = this;
-		debug("destory", self.id);;
+		debug("destory", self.id);
 };
 
 instance.prototype.actions = function(system) {
@@ -270,10 +270,10 @@ instance.prototype.action = function(action) {
 						cmd = 'CTD STOP';
 						break;
 
-		};
+		}
 
 
-		if (self.config.prot == 'tcp') {
+		if (self.config.port !== undefined && self.config.host !== undefined) {
 				if (cmd !== undefined) {
 
 						debug('sending ',cmd,"to",self.config.host);
@@ -284,15 +284,9 @@ instance.prototype.action = function(action) {
 								debug('Socket not connected :(');
 						}
 				}
-		};
-
-		instance.module_info = {
-				label: 'piXtimer Pro',
-				id: 'pixtimerpro',
-				version: '1.0.0'
-		};
-
-		instance_skel.extendedBy(instance);
-		exports = module.exports = instance;
+		}
 
 };
+
+instance_skel.extendedBy(instance);
+exports = module.exports = instance;
