@@ -79,7 +79,7 @@ instance.prototype.config_fields = function () {
 						label: 'Target port',
 						tooltip: 'The piXtimer Pro port number',
 						width: 6,
-						default: "7770",
+						default: "9756",
 						regex: self.REGEX_PORT
 				}
 		]
