@@ -163,7 +163,7 @@ instance.prototype.actions = function(system) {
 										type: 'textinput',
 										label: 'Countdown video time and Play',
 										id: 'time',
-										regex: self.REGEX_NUMBER
+										default: '00:00:00'
 								}
 						]
 				},
@@ -174,7 +174,7 @@ instance.prototype.actions = function(system) {
 										type: 'textinput',
 										label: 'Countdown Time',
 										id: 'time',
-										regex: self.REGEX_NUMBER
+										default: '00:00:00'
 								}
 						]
 				},
