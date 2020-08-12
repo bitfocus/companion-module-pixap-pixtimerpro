@@ -17,3 +17,4 @@ Controls piXap piXtimer Pro
 * Set Countdown video time and play
 * Set Countdown video time
 * Countdown video play/stop
+* Adjust speaker timer time
