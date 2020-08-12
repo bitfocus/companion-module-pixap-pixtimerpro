@@ -191,7 +191,7 @@ instance.prototype.actions = function(system) {
 									type: 'textinput',
 									label: 'Time in second',
 									id: 'time',
-									regex: self.REGEX_NUMBER
+									regex: self.REGEX_SIGNED_NUMBER
 								}
 						]
 				}
