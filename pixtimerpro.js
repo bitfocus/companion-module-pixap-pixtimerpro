@@ -183,6 +183,17 @@ instance.prototype.actions = function(system) {
 				},
 				'countdownStop:':    {
 						label: 'Countdown video stop'
+				},
+				'adjustTime:':    {
+						label: 'Adjust Speaker Timer Time',
+						options: [
+								{
+									type: 'textinput',
+									label: 'Time in second',
+									id: 'time',
+									regex: self.REGEX_NUMBER
+								}
+						]
 				}
 		});
 };
@@ -268,6 +279,10 @@ instance.prototype.action = function(action) {
 
 				case 'countdownStop':
 						cmd = 'CTD STOP';
+						break;
+
+				case 'adjustTime':
+						cmd = 'ADJT ' + opt.time;
 						break;
 
 		}
