@@ -194,6 +194,45 @@ instance.prototype.actions = function(system) {
 									regex: self.REGEX_SIGNED_NUMBER
 								}
 						]
+				},
+				'switchTimerClock:':    {
+						label: 'Switch to Timer & clock'
+				},
+				'ndiEnableDisable:':    {
+						label: 'NDI enable & disable'
+				},
+				'pbpMainEnableDisable:':    {
+						label: 'PlaybackPro main enable & disable'
+				},
+				'pbpBackupEnableDisable:':    {
+						label: 'PlaybackPro backup enable & disable'
+				},
+				'pbpGeneralTake:':    {
+						label: 'PlaybackPro general take'
+				},
+				'pbpGeneralEndall:':    {
+						label: 'PlaybackPro general end all'
+				},
+				'pbpGeneralPrevious:':    {
+						label: 'PlaybackPro general previous clip'
+				},
+				'pbpGeneralNext:':    {
+						label: 'PlaybackPro general Next clip'
+				},
+				'pbpGeneralPlay:':    {
+						label: 'PlaybackPro general play'
+				},
+				'pbpGeneralPause:':    {
+						label: 'PlaybackPro general pause'
+				},
+				'pbpGeneralGoto10:':    {
+						label: 'PlaybackPro general goto 10'
+				},
+				'pbpGeneralGoto20:':    {
+						label: 'PlaybackPro general goto 20'
+				},
+				'pbpGeneralGoto30:':    {
+						label: 'PlaybackPro general goto 30'
 				}
 		});
 };
@@ -283,6 +322,58 @@ instance.prototype.action = function(action) {
 
 				case 'adjustTime':
 						cmd = 'ADJT ' + opt.time;
+						break;
+
+				case 'switchTimerClock':
+						cmd = 'SWTC';
+						break;
+
+				case 'ndiEnableDisable':
+						cmd = 'NDI ED';
+						break;
+
+				case 'pbpMainEnableDisable':
+						cmd = 'PBPM ED';
+						break;
+
+				case 'pbpBackupEnableDisable':
+						cmd = 'PBPB ED';
+						break;
+
+				case 'pbpGeneralTake':
+						cmd = 'PBPG TAKE';
+						break;
+
+				case 'pbpGeneralEndall':
+						cmd = 'PBPG ENDALL';
+						break;
+
+				case 'pbpGeneralPrevious':
+						cmd = 'PBPG PREVC';
+						break;
+
+				case 'pbpGeneralNext':
+						cmd = 'PBPG NEXTC';
+						break;
+
+				case 'pbpGeneralPlay':
+						cmd = 'PBPG PLAY';
+						break;
+
+				case 'pbpGeneralPause':
+						cmd = 'PBPG PAUSE';
+						break;
+
+				case 'pbpGeneralGoto10':
+						cmd = 'PBPG GOTO 10';
+						break;
+
+				case 'pbpGeneralGoto20':
+						cmd = 'PBPG GOTO 20';
+						break;
+
+				case 'pbpGeneralGoto30':
+						cmd = 'PBPG GOTO 30';
 						break;
 
 		}

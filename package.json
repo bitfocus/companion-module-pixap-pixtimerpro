@@ -1,6 +1,6 @@
 {
 		"name": "pixap-pixtimerpro",
-		"version": "1.0.6",
+		"version": "1.0.7",
 		"keywords": [
 				"Software",
 				"Timing"
@@ -8,7 +8,6 @@
 		"manufacturer": "piXap",
 	"product": "piXtimer Pro",
 	"shortname": "piXtimer",
-		"homepage": "https://www.pixap.fr/products.php?ref=8&lang=en",
 		"description": "Module to control piXtimer pro countdown timer",
 		"main": "pixtimerpro.js",
 		"scripts": {
