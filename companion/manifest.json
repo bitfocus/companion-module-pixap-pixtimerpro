@@ -1,0 +1,33 @@
+{
+	"id": "pixap-pixtimerpro",
+	"name": "pixap-pixtimerpro",
+	"shortname": "piXtimer Pro",
+	"description": "piXtimer Pro plugin for Companion",
+	"version": "3.0.1",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-pixap-pixtimerpro.git",
+	"bugs": "https://github.com/bitfocus/companion-module-pixap-pixtimerpro/issues",
+	"maintainers": [
+		{
+			"name": "Nicolas Keesst",
+			"email": "nkeesst@pixap.fr"
+		}
+	],
+	"runtime": {
+		"type": "node18",
+		"api": "nodejs-ipc",
+		"apiVersion": "1.3.0",
+		"entrypoint": "../main.js"
+	},
+	"legacyIds": [
+		"pixtimerpro"
+	],
+	"manufacturer": "piXap",
+	"products": [
+		"piXtimer Pro"
+	],
+	"keywords": [
+		"Software",
+		"Timing"
+	]
+}
