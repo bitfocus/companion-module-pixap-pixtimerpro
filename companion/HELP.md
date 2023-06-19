@@ -1,14 +1,22 @@
 # piXap piXtimer Pro
 
 Controls piXap piXtimer Pro
-Version control 3.0.1
+Version control 3.0.2
 
 ## Configuration
-* piXtimer Pro Version 1.9.9
+* piXtimer Pro Version 1.9.9 at least
 * Type in the IP address of the device.
 * The default Port is 9756.
 
-## Actions
+## Actions 1.10
+* Speaker Flash
+* Session Flash
+
+## Presets 1.10
+* Speaker Flash
+* Session Flash
+
+## Actions 1.9.9
 * Recall timer preset
 * Timer speaker play/pause/stop
 * Timer session play/pause/stop
@@ -32,7 +40,7 @@ Version control 3.0.1
 * PlaybackPro general pause
 * PlaybackPro general goto 10 20 30
 
-## Presets
+## Presets 1.9.9
 * Recall timer preset
 * Timer speaker play/pause/stop
 * Timer session play/pause/stop
