@@ -76,7 +76,7 @@ module.exports = {
 				size: '14',
 				color: combineRgb(colorWhite[0], colorWhite[1], colorWhite[2]),
 				bgcolor: combineRgb(colorBlack[0], colorBlack[1], colorBlack[2]),
-				topbar: 'Hide'
+				show_topbar: "hide",
 			},
 			steps: [
 				{
@@ -165,28 +165,6 @@ module.exports = {
 					},
 				},
 			],
-		}
-
-		presets['Speaker Flash'] = {
-			type: 'button',
-			category: 'Effect',
-			style: {
-				text: 'Speaker Flash',
-				size: '14',
-				color: combineRgb(colorWhite[0], colorWhite[1], colorWhite[2]),
-				bgcolor: combineRgb(colorpixBlue[0], colorpixBlue[1], colorpixBlue[2]),
-			},
-			steps: [
-				{
-					down: [
-						{
-							actionId: 'speaker_timer_flash',
-						},
-					],
-					up: [],
-				},
-			],
-			feedbacks: [],
 		}
 
 		// SESSION PLAY PAUSE STOP
@@ -288,28 +266,6 @@ module.exports = {
 					},
 				},
 			],
-		}
-
-		presets['Session Flash'] = {
-			type: 'button',
-			category: 'Effect',
-			style: {
-				text: 'Session Flash',
-				size: '14',
-				color: combineRgb(colorWhite[0], colorWhite[1], colorWhite[2]),
-				bgcolor: combineRgb(colorpixBlue[0], colorpixBlue[1], colorpixBlue[2]),
-			},
-			steps: [
-				{
-					down: [
-						{
-							actionId: 'session_timer_flash',
-						},
-					],
-					up: [],
-				},
-			],
-			feedbacks: [],
 		}
 
 		// ALL PLAY PAUSE STOP

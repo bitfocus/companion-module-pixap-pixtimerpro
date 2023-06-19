@@ -41,7 +41,6 @@ class PixtimerProInstance extends InstanceBase {
 		this.updateStatus(InstanceStatus.Ok)
 		this.updateFeedbacks() // export feedbacks
 		this.updateVariableDefinitions() // export variable definitions
-		//this.updateUpgrade()
 
 		this.init_tcp()
 		this.refreshTcpTimer()

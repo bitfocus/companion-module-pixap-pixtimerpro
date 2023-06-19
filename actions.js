@@ -85,14 +85,6 @@ module.exports = {
 				await this.sendCommand('PST STOP')
 			},
 		}
-		actions['speaker_timer_flash'] = {
-			name: 'Speaker Timer Flash',
-			options: [],
-			callback: async (event) => {
-				this.log('info', 'Timer speaker Flash !')
-				await this.sendCommand('PST FLASH')
-			},
-		}
 		actions['session_timer_play'] = {
 			name: 'Session Timer Play',
 			options: [],
@@ -115,14 +107,6 @@ module.exports = {
 			callback: async (event) => {
 				this.log('info', 'Timer session stop !')
 				await this.sendCommand('PSTS STOP')
-			},
-		}
-		actions['session_timer_flash'] = {
-			name: 'Session Timer Flash',
-			options: [],
-			callback: async (event) => {
-				this.log('info', 'Timer session flash !')
-				await this.sendCommand('PSTS FLASH')
 			},
 		}
 		actions['all_timer_play'] = {
